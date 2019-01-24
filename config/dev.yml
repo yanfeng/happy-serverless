@@ -1,0 +1,3 @@
+database: ${ssm:happy_serverless.dev.database~true}
+provider:
+  memory: 128
