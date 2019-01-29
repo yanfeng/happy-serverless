@@ -41,9 +41,11 @@ app.use(async (ctx, next) => {
 // add all the routes with allowed methods
 app.use(router());
 
-// this is only for running local koa erver
-if (process.env.NODE_ENV === 'local') {
-  const server = app.listen(3000, () => console.log('server listening on port: 30000'));
+// this is for running unit testing or local koa erver
+if (process.env.stage === 'local' || process.env.NODE_ENV === 'local') {
+  const server = app.listen(3000, () =>
+    console.log('server listening on port: 30000')
+  );
   module.exports = server;
 }
 

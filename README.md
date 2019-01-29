@@ -1,6 +1,7 @@
 # happy-serverless
 A serverless boilerplate with koa and PostgreSQL.
 
+## stack
 * serverless framework + aws
 * koa for rest api (router, logger, error handling)
 * postgreSQL as database
@@ -24,8 +25,12 @@ A serverless boilerplate with koa and PostgreSQL.
 * make massive-js work with aws lambda (NOTE: postgres on aws should allow lambda access by using VPC/database security group)
 * use serverless variables to load different configurations based on stage: local, dev, staging, or production.
 * use AWS Systems Manager (SSM) Parameter Store to store encrypted parameters
-* TODO: coputed columns (e.g. full name), full text search, data schema and validation, DTO valication
-* TODO: fix unit tests, complete postman test scripts
+* use serverless-jest-plugin to use jest with serverless framework for unit testing
+  ```
+  sls invoke test [--stage stage] [--region region] [-f function]
+  ```
+* TODO: computed columns (e.g. full name), full text search, data schema and validation, DTO valication
+* TODO: complete postman test scripts
 
 
 NOTE:
