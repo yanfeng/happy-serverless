@@ -1,6 +1,14 @@
 # happy-serverless
 A serverless boilerplate with koa and PostgreSQL.
 
+## Prepare
+* Install serverless
+  ```
+  npm install -g serverless
+  ```
+* Install PostgreSQL database in your local or use PostgreSQL RDS on aws
+* Run ./config/setup.sql on PostgreSQL database
+
 ## stack
 * serverless framework + aws
 * koa for rest api (router, logger, error handling)
